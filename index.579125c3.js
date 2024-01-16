@@ -3121,7 +3121,7 @@ async function upload(as) {
         body: form
     });
     let textContent = await response.text();
-    let filename = url.split("/").pop();
+    let filename = textContent.split("/").pop();
     cloud_chatMessages.push(`${username} Uploaded a file: <a href="` + `https://codefoxy-server.hf.space` + textContent + `" download>` + filename + `</a>`);
 }
 
